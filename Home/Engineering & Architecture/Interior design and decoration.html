@@ -1,0 +1,388 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Engineering & Architecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+  .cards-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .up-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+
+  .up-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .user-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  .user-info .location {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  .stats {
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #333;
+  }
+
+  .description {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .tags span {
+    display: inline-block;
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 0.85em;
+  }
+
+  .profile-btn {
+    display: inline-block;
+     text-align: center;
+     width: 100%;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #005b84;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+
+  }
+
+  .profile-btn:hover {
+    background: #005b84;
+  }
+
+  .load-more {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #loadMoreBtn {
+    padding: 12px 24px;
+    background: #005b84;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  #loadMoreBtn:hover {
+    background: #005b84;
+  }
+  
+</style>
+<section class="cards-wrapper">
+
+  <div class="cards-grid">
+
+    <!-- CARD 1 -->
+    <div class="up-card" data-skill="architecture autocad">
+      <div class="card-header">
+        <img src="https://i.pravatar.cc/100?img=40" class="avatar">
+        <div class="user-info">
+          <h3>Eng. Reem Aslam.</h3>
+          <span class="location">Cairo, Egypt</span>
+          <div class="stats">
+            <span class="price">$35/hr</span>
+            <span class="rating">⭐ 4.9</span>
+            <span class="jobs">💼 32 jobs</span>
+          </div>
+        </div>
+      </div>
+      <p class="description">🏗️ Architect specialized in residential & commercial designs.</p>
+      <div class="tags"><span>AutoCAD</span><span>3D Max</span></div>
+      <a href="#" class="profile-btn">See profile</a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="up-card hidden-card" data-skill="civil structural">
+      <div class="card-header">
+        <img src="https://i.pravatar.cc/100?img=41" class="avatar">
+        <div class="user-info">
+          <h3>Eng. Salma Hossam.</h3>
+          <span class="location">Alexandria, Egypt</span>
+          <div class="stats">
+            <span class="price">$30/hr</span>
+            <span class="rating">⭐ 4.8</span>
+            <span class="jobs">💼 24 jobs</span>
+          </div>
+        </div>
+      </div>
+      <p class="description">🏢 Civil Engineer expert in structural design & analysis.</p>
+      <div class="tags"><span>ETABS</span><span>SAFE</span></div>
+      <a href="#" class="profile-btn">See profile</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="up-card hidden-card" data-skill="interior design">
+      <div class="card-header">
+        <img src="https://i.pravatar.cc/100?img=42" class="avatar">
+        <div class="user-info">
+          <h3>Eng. Nourr.</h3>
+          <span class="location">Giza, Egypt</span>
+          <div class="stats">
+            <span class="price">$28/hr</span>
+            <span class="rating">⭐ 4.9</span>
+            <span class="jobs">💼 27 jobs</span>
+          </div>
+        </div>
+      </div>
+      <p class="description">🎨 Interior designer creating modern & functional spaces.</p>
+      <div class="tags"><span>SketchUp</span><span>V-Ray</span></div>
+      <a href="#" class="profile-btn">See profile</a>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="up-card hidden-card" data-skill="planning urban">
+      <div class="card-header">
+        <img src="https://i.pravatar.cc/100?img=43" class="avatar">
+        <div class="user-info">
+          <h3>Eng.Rahma Ahmed .</h3>
+          <span class="location">Mansoura, Egypt</span>
+          <div class="stats">
+            <span class="price">$33/hr</span>
+            <span class="rating">⭐ 4.7</span>
+            <span class="jobs">💼 20 jobs</span>
+          </div>
+        </div>
+      </div>
+      <p class="description">🏙️ Urban planner for smart cities & land development.</p>
+      <div class="tags"><span>Urban Design</span><span>GIS</span></div>
+      <a href="#" class="profile-btn">See profile</a>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="up-card hidden-card" data-skill="construction management">
+      <div class="card-header">
+        <img src="https://i.pravatar.cc/100?img=44" class="avatar">
+        <div class="user-info">
+          <h3>Eng. taghred .</h3>
+          <span class="location">Tanta, Egypt</span>
+          <div class="stats">
+            <span class="price">$29/hr</span>
+            <span class="rating">⭐ 4.8</span>
+            <span class="jobs">💼 25 jobs</span>
+          </div>
+        </div>
+      </div>
+      <p class="description">📐 Project engineer managing construction timelines & budgets.</p>
+      <div class="tags"><span>Project Management</span><span>Primavera</span></div>
+      <a href="#" class="profile-btn">See profile</a>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="up-card hidden-card" data-skill="bim revit">
+      <div class="card-header">
+        <img src="https://i.pravatar.cc/100?img=45" class="avatar">
+        <div class="user-info">
+          <h3>Eng. Lina .</h3>
+          <span class="location">Asyut, Egypt</span>
+          <div class="stats">
+            <span class="price">$31/hr</span>
+            <span class="rating">⭐ 5.0</span>
+            <span class="jobs">💼 19 jobs</span>
+          </div>
+        </div>
+      </div>
+      <p class="description">🏗️ BIM specialist for architectural & structural models.</p>
+      <div class="tags"><span>Revit</span><span>BIM</span></div>
+      <a href="#" class="profile-btn">See profile</a>
+    </div>
+     <div class="load-more">
+    <button id="loadMoreBtn">Load more engineers</button>
+  </div><!-- CARD 7 -->
+<div class="up-card hidden-card" data-skill="structural analysis">
+  <div class="card-header">
+    <img src="https://i.pravatar.cc/100?img=27" class="avatar">
+    <div class="user-info">
+      <h3>Eng.Rana  Hassan .</h3>
+      <span class="location">Fayoum, Egypt</span>
+      <div class="stats">
+        <span class="price">$32/hr</span>
+        <span class="rating">⭐ 4.8</span>
+        <span class="jobs">💼 23 jobs</span>
+      </div>
+    </div>
+  </div>
+  <p class="description">🏗️ Structural engineer ensuring safety & strong building design.</p>
+  <div class="tags"><span>ETABS</span><span>Structural Design</span></div>
+  <a href="#" class="profile-btn">See profile</a>
+</div>
+
+<!-- CARD 8 -->
+<div class="up-card hidden-card" data-skill="landscape design">
+  <div class="card-header">
+    <img src="https://i.pravatar.cc/100?img=28" class="avatar">
+    <div class="user-info">
+      <h3>Eng. Amr Tarek.</h3>
+      <span class="location">Asyut, Egypt</span>
+      <div class="stats">
+        <span class="price">$26/hr</span>
+        <span class="rating">⭐ 4.7</span>
+        <span class="jobs">💼 18 jobs</span>
+      </div>
+    </div>
+  </div>
+  <p class="description">🌿 Landscape architect designing outdoor spaces & parks.</p>
+  <div class="tags"><span>Landscape</span><span>3D Design</span></div>
+  <a href="#" class="profile-btn">See profile</a>
+</div>
+
+<!-- CARD 9 -->
+<div class="up-card hidden-card" data-skill="revit bim">
+  <div class="card-header">
+    <img src="https://i.pravatar.cc/100?img=29" class="avatar">
+    <div class="user-info">
+      <h3>Eng.Noha Mahmoud .</h3>
+      <span class="location">Sohag, Egypt</span>
+      <div class="stats">
+        <span class="price">$30/hr</span>
+        <span class="rating">⭐ 4.8</span>
+        <span class="jobs">💼 20 jobs</span>
+      </div>
+    </div>
+  </div>
+  <p class="description">🏢 BIM engineer creating detailed 3D building models.</p>
+  <div class="tags"><span>Revit</span><span>BIM</span></div>
+  <a href="#" class="profile-btn">See profile</a>
+</div>
+
+<!-- CARD 10 -->
+<div class="up-card hidden-card" data-skill="architecture planning">
+  <div class="card-header">
+    <img src="https://i.pravatar.cc/100?img=30" class="avatar">
+    <div class="user-info">
+      <h3>Eng.  Fatma Adel .</h3>
+      <span class="location">Cairo, Egypt</span>
+      <div class="stats">
+        <span class="price">$34/hr</span>
+        <span class="rating">⭐ 4.9</span>
+        <span class="jobs">💼 22 jobs</span>
+      </div>
+    </div>
+  </div>
+  <p class="description">📐 Architect specializing in modern residential projects.</p>
+  <div class="tags"><span>AutoCAD</span><span>Planning</span></div>
+  <a href="#" class="profile-btn">See profile</a>
+</div>
+
+<!-- CARD 11 -->
+<div class="up-card hidden-card" data-skill="site supervision">
+  <div class="card-header">
+    <img src="https://i.pravatar.cc/100?img=31" class="avatar">
+    <div class="user-info">
+      <h3>Eng. Saad .</h3>
+      <span class="location">Minya, Egypt</span>
+      <div class="stats">
+        <span class="price">$24/hr</span>
+        <span class="rating">⭐ 4.6</span>
+        <span class="jobs">💼 17 jobs</span>
+      </div>
+    </div>
+  </div>
+  <p class="description">👷 Civil engineer supervising construction sites & quality.</p>
+  <div class="tags"><span>Site Work</span><span>Construction</span></div>
+  <a href="#" class="profile-btn">See profile</a>
+</div>
+
+<!-- CARD 12 -->
+<div class="up-card hidden-card" data-skill="interior architecture">
+  <div class="card-header">
+    <img src="https://i.pravatar.cc/100?img=32" class="avatar">
+    <div class="user-info">
+      <h3>Eng. Zeina Mohamed .</h3>
+      <span class="location">Beni Suef, Egypt</span>
+      <div class="stats">
+        <span class="price">$28/hr</span>
+        <span class="rating">⭐ 4.8</span>
+        <span class="jobs">💼 24 jobs</span>
+      </div>
+    </div>
+  </div>
+  <p class="description">🏠 Interior architect blending aesthetics with functionality.</p>
+  <div class="tags"><span>Interior Design</span><span>3D Rendering</span></div>
+  <a href="#" class="profile-btn">See profile</a>
+</div>
+</section>
+ <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>Task Hunt</h3>
+        <ul>
+          <li><a href="#">About Task Hunt</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Rights Protection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Discussions</a></li>
+          <li><a href="#">Topics</a></li>
+          <li><a href="#">User Experiences</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="icon" alt="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="icon" alt="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" class="icon" alt="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" class="icon" alt="Twitter">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Task Hunt — All rights reserved</p>
+    </div>
+  </footer>
+</html>
